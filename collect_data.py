@@ -10,25 +10,25 @@ font20 = pygame.font.Font('freesansbold.ttf', 20)
 WHITE = (255, 255, 255)
 
 # Basic parameters of the screen
-width, height = 1000, 1000
+width, height = 150, 100
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Pong")
 
 
 clock = pygame.time.Clock()    
-fps = 60
-nFrames = 24600 # arbitrary number
+fps = 5
+nFrames = 300 # arbitrary number
 
-buffer_topology = 20 ## amount of blank canvas for buttons to wrap around
+buffer_topology = 5 ## amount of blank canvas for buttons to wrap around
 data_matrix = np.zeros([width + buffer_topology,height + buffer_topology,nFrames])
 
 def main():
     running = True
 
     # Defining the objects
-    computer_0 = Computer(20, 0, 10, 100, 10, WHITE)
-    computer_1 = Computer(width-30, 0, 10, 100, 10, WHITE)
-    ball = Ball(width//2, height//2, 7, 7, WHITE)
+    computer_0 = Computer(20, 0, 2, 10, 10, WHITE)
+    computer_1 = Computer(width-30, 0, 2, 10, 10, WHITE)
+    ball = Ball(width//2, height//2, 3, 7, WHITE)
 
     list_of_computers = [computer_0, computer_1]
     i = 0
